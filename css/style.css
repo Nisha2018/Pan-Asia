@@ -225,7 +225,8 @@ img {
     margin-bottom: 0;
 }
 
-.ctaBtn button,.btnDark {
+.ctaBtn button,
+.btnDark {
     font-size: 20px;
     font-weight: 600;
     color: #020101;
@@ -247,8 +248,110 @@ img {
     grid-row-gap: 20px;
 }
 
+/*why choose us*/
+.whyChooseUs {
+    background: url(../images/why-choose-us.png);
+    background-size: cover;
+    background-position: 104px -149px;
+    background-repeat: no-repeat;
+}
+
+.whyChooseUs .whyContent {
+    display: grid;
+}
+
+.whyChooseUs .infoLeft {
+    text-align: left;
+}
+
+/*FAQS*/
+.faqs {
+    background: #FBFBFB;
+}
+
+/* Accordion styles */
+.tabs input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+
+.tabs {
+    overflow: hidden;
+}
+
+.tab {
+    width: 100%;
+    color: #1E2022;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.tab-label {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    background: #E6E6E6;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: left;
+    /* Icon */
+}
+
+/*.tab-label:hover {
+    color: hsl(357deg 96% 53%);
+}*/
+
+.tab-label::after {
+    content: "❯";
+    width: 1em;
+    height: 1em;
+    text-align: center;
+    transition: all 0.35s;
+}
+
+.tab-content {
+    max-height: 0;
+    padding: 0 1em;
+    color: #2c3e50;
+    background: white;
+    text-align: left;
+    transition: all 0.35s;
+}
+
+.tab-close {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1em;
+    font-size: 0.75em;
+    background: #2c3e50;
+    cursor: pointer;
+}
+
+input:checked+.tab-label::after {
+    transform: rotate(90deg);
+}
+
+input:checked~.tab-content {
+    max-height: 100vh;
+    padding: 1em;
+}
+
+.faqsContent {
+    display: grid;
+    grid-row-gap: 20px;
+}
+
 /*Mobile view - Navbar*/
 @media (max-width: 768px) {
+    .p-tb {
+        padding: 3rem 2rem;
+    }
+
+    .title {
+        font-size: 22px;
+    }
+
     .logo {
         width: 180px;
     }
@@ -288,6 +391,11 @@ img {
 
     .ctaBtn button {
         margin: 0 12px;
+    }
+
+    .whyChooseUs .whyContent {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
 
 }
