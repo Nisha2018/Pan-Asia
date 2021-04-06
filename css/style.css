@@ -1,0 +1,293 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    line-height: 1.8;
+    letter-spacing: 1px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+.p-tb {
+    padding: 5rem 2rem;
+}
+
+.logo {
+    width: 260px;
+}
+
+.btnRed {
+    background-color: #B30D11;
+    color: #fff;
+    padding: 10px 22px;
+    padding-bottom: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.heroSlider {
+    position: relative;
+}
+
+.owl-dots {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.title {
+    font-size: 30px;
+    font-weight: 700;
+    color: #3f3f3f;
+}
+
+/* Brands section */
+.brands {
+    background: #F2F2F2;
+}
+
+.brandsCont input[type="radio"] {
+    display: none;
+}
+
+.brandsCont {
+    padding-top: 20px;
+    background: hsl(0deg 0% 95%);
+    display: grid;
+    place-items: center;
+    grid-row-gap: 20px;
+}
+
+.brandsCont .brands {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+#cat1:checked~.brands.category1,
+#cat2:checked~.brands.category2 {
+    display: grid;
+}
+
+#cat1:checked~.labels label[for="cat1"]::after,
+#cat1:checked~.labels label[for="cat1"]::before,
+#cat2:checked~.labels label[for="cat2"]::after,
+#cat2:checked~.labels label[for="cat2"]::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+.brandsCont .labels {
+    display: flex;
+    grid-gap: 10px;
+}
+
+.brandsCont .labels label {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 8px;
+    margin: 0;
+    cursor: pointer;
+    background: #020101;
+    color: #fff;
+    border-radius: 12px;
+    position: relative;
+}
+
+.brandsCont .labels label::after {
+    content: "";
+    position: absolute;
+    top: 120%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #333;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+
+.brandsCont .labels label::before {
+    content: "";
+    position: absolute;
+    top: 118%;
+    left: 50%;
+    width: 10px;
+    height: 5px;
+    border-radius: 10px;
+    background: #333;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+
+.brandsCont .brandBx {
+    position: relative;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background: #fff;
+    padding: 30px;
+    height: 250px;
+    width: auto;
+}
+
+.brandsCont .brandBx img {
+    width: 100%;
+}
+
+.brandsCont .brandBx .contentBx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.brandsCont .brandBx .contentBx::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+.brandsCont .brandBx:hover .contentBx::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+.brandsCont .brandBx .contentBx .content a {
+    position: relative;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid #fff;
+    padding: 10px;
+    letter-spacing: 1px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(40px);
+    transition: all 0.5s ease-in;
+    transition-delay: 0s;
+}
+
+.brandsCont .brandBx:hover .contentBx .content a {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition-delay: 0.3s;
+}
+
+
+/*CTA section*/
+.cta {
+    background: url(../images/call-us-bg.png);
+    png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.cta .text {
+    color: #FFFFFF;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.cta .text p {
+    margin-bottom: 0;
+}
+
+.ctaBtn button,.btnDark {
+    font-size: 20px;
+    font-weight: 600;
+    color: #020101;
+    background-color: #FFFFFF;
+    border-radius: 12px 12px 12px 12px;
+    padding: 12px 24px;
+    border: none;
+}
+
+.btnDark {
+    background-color: #020101;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 32px;
+}
+
+.aboutContent {
+    display: grid;
+    grid-row-gap: 20px;
+}
+
+/*Mobile view - Navbar*/
+@media (max-width: 768px) {
+    .logo {
+        width: 180px;
+    }
+
+    .btnRed {
+        margin: 0 auto;
+    }
+
+    .cta {
+        background-position: center center;
+    }
+
+    .ctaBtn button {
+        margin: 10px;
+    }
+}
+
+/*Tab view*/
+@media only screen and (min-width: 767px) {
+    .brandsCont .brands {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+/*Desktop view*/
+@media only screen and (min-width: 991px) {
+    .brandsCont .brands {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .cta .ctaContent {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+
+    .ctaBtn button {
+        margin: 0 12px;
+    }
+
+}
