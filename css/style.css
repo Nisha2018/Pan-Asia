@@ -20,7 +20,7 @@ img {
 }
 
 .p-tb {
-    padding: 5rem 2rem;
+    padding: 4rem 2rem;
 }
 
 .logo {
@@ -229,7 +229,7 @@ img {
     padding-right: 5px;
 }
 
-.ctaBtn button,
+.ctaBtn a,
 .btnDark {
     font-size: 20px;
     font-weight: 600;
@@ -420,9 +420,25 @@ input:checked~.tab-content {
     grid-row-gap: 10px;
 }
 
+.footer2 .links a::before {
+    content: "\f0da";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: #0D315A;
+    margin-right: 8px;
+}
+
+.footer3 a i {
+    color: #0D315A;
+}
+
 a {
     color: #1E2022;
     text-decoration: none;
+}
+
+a:hover {
+    color: #B30D11;
 }
 
 .footer4 .icons a {
@@ -444,6 +460,23 @@ a {
     display: grid;
     grid-template-columns: auto auto;
     grid-gap: 8px;
+}
+
+.footerBottom {
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.footerBottom .text {
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+.border-tb {
+    border-style: solid;
+    border-width: 1px 0px 1px 0px;
+    border-color: #EEEEEE;
+    padding: 30px 0;
 }
 
 
@@ -469,7 +502,7 @@ a {
         background-position: center center;
     }
 
-    .ctaBtn button {
+    .ctaBtn a {
         margin: 10px;
     }
 
@@ -489,6 +522,10 @@ a {
     .footerTop {
         grid-row-gap: 10px;
     }
+
+    .ctaBtn {
+        display: grid;
+    }
 }
 
 /*Tab view*/
@@ -501,10 +538,18 @@ a {
         grid-template-columns: 1fr 1fr;
     }
 
+    .footerBottom {
+        display: flex;
+    }
+
 }
 
 /*Desktop view*/
 @media only screen and (min-width: 991px) {
+    .btnRed {
+        margin-left: 20px;
+    }
+    
     .brandsCont .brands {
         grid-template-columns: 1fr 1fr 1fr;
     }
@@ -515,7 +560,7 @@ a {
         align-items: center;
     }
 
-    .ctaBtn button {
+    .ctaBtn a {
         margin: 0 12px;
     }
 
