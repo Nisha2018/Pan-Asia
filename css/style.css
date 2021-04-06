@@ -393,6 +393,60 @@ input:checked~.tab-content {
     background: #B30D11;
 }
 
+/*Footer*/
+.footerTop {
+    display: grid;
+    text-align: left;
+    font-size: 13px;
+    line-height: 2;
+}
+
+.footerTop .links {
+    display: grid;
+}
+
+.footerTop .logo {
+    width: 200px;
+}
+
+.footerTop .subtitle {
+    color: #0D315A;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.footer1 {
+    display: grid;
+    grid-row-gap: 10px;
+}
+
+a {
+    color: #1E2022;
+    text-decoration: none;
+}
+
+.footer4 .icons a {
+    display: grid;
+    width: 40px;
+    height: 40px;
+    background-color: #3b5998;
+    text-align: center;
+    border-radius: 100%;
+    align-items: center;
+    color: #fff;
+}
+
+.footer4 .icons a.twitter {
+    background-color: #1da1f2;
+}
+
+.footer4 .icons {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 8px;
+}
+
+
 /*Mobile view - Navbar*/
 @media (max-width: 768px) {
     .p-tb {
@@ -427,11 +481,23 @@ input:checked~.tab-content {
     .fa-quote-right {
         right: -57%;
     }
+
+    .footer4 .icons {
+        justify-content: start;
+    }
+
+    .footerTop {
+        grid-row-gap: 10px;
+    }
 }
 
 /*Tab view*/
 @media only screen and (min-width: 767px) {
     .brandsCont .brands {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footerTop {
         grid-template-columns: 1fr 1fr;
     }
 
@@ -456,6 +522,11 @@ input:checked~.tab-content {
     .whyChooseUs .whyContent {
         display: grid;
         grid-template-columns: 1fr 1fr;
+    }
+
+    .footerTop {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-items: center;
     }
 
 }
