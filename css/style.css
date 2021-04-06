@@ -42,7 +42,7 @@ img {
     position: relative;
 }
 
-.owl-dots {
+.heroSlides .owl-dots {
     position: absolute;
     bottom: 5%;
     left: 50%;
@@ -225,6 +225,10 @@ img {
     margin-bottom: 0;
 }
 
+.ctaBtn i {
+    padding-right: 5px;
+}
+
 .ctaBtn button,
 .btnDark {
     font-size: 20px;
@@ -337,9 +341,56 @@ input:checked~.tab-content {
     padding: 1em;
 }
 
-.faqsContent {
+.faqsContent,
+.testContent,
+.testimonials .testBox {
     display: grid;
     grid-row-gap: 20px;
+}
+
+/*Testimonials*/
+.testSlides.owl-carousel.owl-loaded {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+}
+
+.testimonials .profile img {
+    width: 120px;
+    border-radius: 100%;
+}
+
+.testimonials .profile {
+    display: grid;
+    grid-row-gap: 10px;
+    justify-content: center;
+}
+
+.testimonials .profile .name {
+    font-size: 18px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.testimonials .profile i {
+    position: absolute;
+    top: 30%;
+    left: 37%;
+    font-size: 45px;
+    color: #E6E6E6;
+}
+
+.fa-quote-right {
+    right: 15%;
+}
+
+.testSlides.owl-theme .owl-dots .owl-dot span {
+    width: 60px;
+    height: 5px;
+}
+
+.owl-theme .owl-dots .owl-dot.active span {
+    background: #B30D11;
 }
 
 /*Mobile view - Navbar*/
@@ -366,6 +417,15 @@ input:checked~.tab-content {
 
     .ctaBtn button {
         margin: 10px;
+    }
+
+    .testimonials .profile i {
+        top: 20%;
+        left: 10%;
+    }
+
+    .fa-quote-right {
+        right: -57%;
     }
 }
 

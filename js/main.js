@@ -20,4 +20,24 @@ $(document).ready(function() {
         }
     })
 
+    //Testimonial Slides
+    $('.testSlides').owlCarousel({
+        loop: true,
+        nav: false,
+        dots: true,
+        autoplay: false,
+        autoplayTimeout: 6000,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 1
+            },
+            1000: {
+                items: 1
+            }
+        }
+    })
+
 });
