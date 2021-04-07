@@ -139,7 +139,8 @@ img {
     transition: 0.3s;
 }
 
-.brandsCont .brandBx {
+.brandsCont .brandBx,
+.brandDetails .brandBx {
     position: relative;
     display: grid;
     justify-items: center;
@@ -149,12 +150,18 @@ img {
     height: 250px;
     width: auto;
 }
+.brandDetails .brandBx {
+    box-shadow: 2px 2px 8px #e6e2e2;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
 
 .brandsCont .brandBx img {
     width: 100%;
 }
 
-.brandsCont .brandBx .contentBx {
+.brandsCont .brandBx .contentBx,
+.brandDetails .brandBx .contentBx {
     position: absolute;
     top: 0;
     left: 0;
@@ -165,7 +172,8 @@ img {
     align-items: center;
 }
 
-.brandsCont .brandBx .contentBx::before {
+.brandsCont .brandBx .contentBx::before,
+.brandDetails .brandBx .contentBx::before {
     content: "";
     position: absolute;
     top: 0;
@@ -178,12 +186,14 @@ img {
     transition: all 0.5s ease-in-out;
 }
 
-.brandsCont .brandBx:hover .contentBx::before {
+.brandsCont .brandBx:hover .contentBx::before,
+.brandDetails .brandBx:hover .contentBx::before {
     opacity: 1;
     visibility: visible;
 }
 
-.brandsCont .brandBx .contentBx .content a {
+.brandsCont .brandBx .contentBx .content a,
+.brandDetails .brandBx .contentBx .content a {
     position: relative;
     color: #fff;
     font-size: 20px;
@@ -199,7 +209,8 @@ img {
     transition-delay: 0s;
 }
 
-.brandsCont .brandBx:hover .contentBx .content a {
+.brandsCont .brandBx:hover .contentBx .content a,
+.brandDetails .brandBx:hover .contentBx .content a {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
@@ -230,7 +241,8 @@ img {
 }
 
 .ctaBtn a,
-.btnDark {
+.btnDark,
+.btnBlue {
     font-size: 20px;
     font-weight: 600;
     color: #020101;
@@ -238,6 +250,13 @@ img {
     border-radius: 12px 12px 12px 12px;
     padding: 12px 24px;
     border: none;
+}
+
+.btnBlue {
+    background: #0D315A;
+    color: #fff;
+    border-radius: 0;
+    padding: 8px 35px;
 }
 
 .btnDark {
@@ -479,6 +498,114 @@ a:hover {
     padding: 30px 0;
 }
 
+/*Contact Page*/
+.heroBanner {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/brands-bg.jpg);
+    background-size: cover;
+    height: 300px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.titleBig {
+    font-size: 80px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.contactContent {
+    display: grid;
+    grid-gap: 20px;
+    text-align: left;
+}
+
+.contactContent .subtitle {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 0px;
+}
+
+.contactDetails,
+.contactForm {
+    display: grid;
+    grid-gap: 50px;
+}
+
+.contactInfo {
+    display: grid;
+    grid-row-gap: 25px;
+}
+
+.contactInfo .time p {
+    margin-bottom: 0;
+}
+
+.contactForm .formControl,
+.contactForm textarea {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #5F666D;
+    font-size: 17px;
+    border-bottom: 1px solid #DADADA;
+    width: 100%;
+    display: block;
+}
+
+#contactForm {
+    display: grid;
+    grid-row-gap: 30px;
+}
+
+.contactInfo i {
+    color: #0D315A;
+}
+
+.navbar-light .navbar-toggler {
+    border: none;
+    outline: none;
+}
+
+.navbar-light .navbar-toggler:focus {
+    outline: 0;
+}
+
+/*Brands Page*/
+.brandsContent {
+    display: grid;
+    grid-gap: 20px;
+}
+
+.brandsWrap {
+    background: #f2f2f2;
+}
+
+.categories .subtitle {
+    text-align: left;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+ul {
+    padding: 0;
+}
+
+.categories ul {
+    background: #fff;
+    padding: 15px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 8px #e6e2e2;
+}
+
+.categories ul li {
+    list-style: none;
+    text-align: left;
+    font-size: 14px;
+    line-height: 3;
+    font-weight: 600;
+    cursor: pointer;
+}
 
 /*Mobile view - Navbar*/
 @media (max-width: 768px) {
@@ -488,6 +615,14 @@ a:hover {
 
     .title {
         font-size: 22px;
+    }
+
+    .titleBig {
+        font-size: 48px;
+    }
+
+    .contactContent .subtitle {
+        font-size: 20px;
     }
 
     .logo {
@@ -526,6 +661,19 @@ a:hover {
     .ctaBtn {
         display: grid;
     }
+
+    .heroBanner {
+        height: 218px;
+    }
+
+    .contactContent {
+        grid-gap: 60px;
+    }
+
+    .contactDetails,
+    .contactForm {
+        grid-gap: 30px;
+    }
 }
 
 /*Tab view*/
@@ -542,6 +690,10 @@ a:hover {
         display: flex;
     }
 
+    .brandsCont .brands {
+        grid-template-columns: 1fr 1fr;
+    }
+
 }
 
 /*Desktop view*/
@@ -549,7 +701,7 @@ a:hover {
     .btnRed {
         margin-left: 20px;
     }
-    
+
     .brandsCont .brands {
         grid-template-columns: 1fr 1fr 1fr;
     }
@@ -572,6 +724,15 @@ a:hover {
     .footerTop {
         grid-template-columns: 1fr 1fr 1fr 1fr;
         justify-items: center;
+    }
+
+    .contactContent {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .brandsContent {
+        grid-column-gap: 50px;
+        grid-template-columns: 1fr 3fr;
     }
 
 }

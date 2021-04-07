@@ -41,3 +41,14 @@ $(document).ready(function() {
     })
 
 });
+
+
+// Isotope Js
+    var $grid = $('.brandDetails').isotope({
+        // options
+    });
+    // filter items on button click
+    $('.categories').on('click', 'li', function() {
+        var filterValue = $(this).attr('data-filter');
+        $grid.isotope({ filter: filterValue });
+    });
